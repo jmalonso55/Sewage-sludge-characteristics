@@ -451,7 +451,7 @@ corrplot(mcor, method="color", col=col(200),
          diag=FALSE)
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](jmalonso55/Sewage-sludge-characteristics/Sludge_analysis_figs/unnamed-chunk-15-1.png)<!-- -->
 
 ### Multivariate analysis
 
