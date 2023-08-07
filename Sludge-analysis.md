@@ -3,6 +3,10 @@ Sewage sludge analysis
 Jorge Alonso
 2023-08-07
 
+``` r
+knitr::opts_chunk$set(fig.path='Figs/')
+```
+
 ### Loading…
 
 ``` r
@@ -451,7 +455,7 @@ corrplot(mcor, method="color", col=col(200),
          diag=FALSE)
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](Figs/unnamed-chunk-15-1.png)<!-- -->
 
 ### Multivariate analysis
 
@@ -532,7 +536,7 @@ legend("topright", legend = c("Eigenvalue = 1"),
        col = c("red"), lty = 5, cex = 0.6)
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](Figs/unnamed-chunk-20-1.png)<!-- -->
 
 ``` r
 # Components number by explained variance
@@ -553,14 +557,14 @@ legend("topleft", legend = c("PC3"),
        col = c("blue"), lty = 5, cex = 0.6)
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![](Figs/unnamed-chunk-21-1.png)<!-- -->
 
 ``` r
 # Basic PCA biplot
 fviz_pca_biplot(pcadata)
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+![](Figs/unnamed-chunk-22-1.png)<!-- -->
 
 ``` r
 # Biplot identifying the WWTPs
@@ -569,8 +573,7 @@ fviz_pca_biplot(pcadata, habillage=data$wwtp, repel=TRUE,  geom.ind="point",
                       pointsize=2)
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
-\### Cluster analysis
+![](Figs/unnamed-chunk-23-1.png)<!-- --> \### Cluster analysis
 
 ``` r
 # Cluster analysis
@@ -583,7 +586,7 @@ fviz_nbclust(dtmv[,3:14], kmeans, method = "wss") +
   ylab("Soma total do quadrado dentro do cluster.")
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](Figs/unnamed-chunk-24-1.png)<!-- -->
 
 ``` r
 # Grouping in clusters
@@ -599,7 +602,7 @@ km.res<-kmeans(df, 4, nstart = 25)
 fviz_cluster(km.res, data = df, main ="")
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](Figs/unnamed-chunk-25-1.png)<!-- -->
 
 ``` r
 # Checking means inside clusters
@@ -635,8 +638,7 @@ fviz_pca_biplot(pcadata, habillage=as.factor(km.res$cluster), repel=TRUE,
         legend.key.width = unit(0.4,"cm"), legend.key.height = unit(0.4,"cm"))
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
-\### Hierarchical cluster
+![](Figs/unnamed-chunk-27-1.png)<!-- --> \### Hierarchical cluster
 
 ``` r
 # Variables dendrogram
@@ -654,7 +656,7 @@ groups = cutree(hc, k=4)
 rect.hclust(hc, k = 4, border = 2:5)
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](Figs/unnamed-chunk-28-1.png)<!-- -->
 
 ``` r
 # Plotting the custom dendrogram
@@ -664,4 +666,4 @@ fviz_dend(hc, cex=0.7, k=4, color_labels_by_k = TRUE, repel=TRUE, main="",  type
   theme(text=element_text(size=9,  family="serif"), legend.position="bottom")
 ```
 
-![](Sludge-analysis_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
+![](Figs/unnamed-chunk-29-1.png)<!-- -->
