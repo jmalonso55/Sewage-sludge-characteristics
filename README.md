@@ -1,5 +1,6 @@
 # Data and R script for chemical characteristics and valuation of sewage sludge batches from Rio de Janeiro
 
+[![DOI](https://zenodo.org/badge/675710430.svg)](https://zenodo.org/badge/latestdoi/675710430)
 This repository contains the R script and part of the data from Alonso, J.M. Ph.D. Thesis (Alonso, J.M., 2019. Caracterização de Biossólidos para a Produção de Mudas de Espécies Arbóreas da Mata Atlântica [Thesis]. Universidade Federal Rural do Rio de Janeiro, Seropédica, Brasil).
 
 The data in this particular repository are from samples of 19 sewage sludge batches. The samples were collected in January, May, August, December 2016, February, June, September, and December 2017 from four wastewater treatment plants (WWTP). At WWTP Ilha do Governador, samples were collected in all eight seasons. Due to various reasons, it was not always possible to collect samples from the other WWTPs. The WWTP Alegria had five collections, while Barra and Sarapuí had three.
